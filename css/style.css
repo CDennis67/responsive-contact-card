@@ -1,0 +1,93 @@
+@import url("./reset.css");
+
+body {
+    background-color: linen;
+}
+h1 {
+    font-size: clamp(1.5rem, 2vw, 2.5rem);
+}
+
+h2 {
+    font-weight: normal;
+    font-size: clamp(1.25rem, 1.75vw, 2rem);
+}
+
+p{
+    font-size: clamp(1rem, 1.5vw, 1.75rem);
+}
+
+.main{
+    display: flex;
+    align-items: center;
+    height: 100dvh;
+    padding: 3rem;
+}
+.contact-card {
+    font-family: monospace;
+    background-color: lemonchiffon;
+    background-image: radial-gradient(linen, lemonchiffon);
+    border: 5px solid indianred;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin: 3em auto;
+    padding: 15px;
+    border-radius: 50px;
+    text-align: center; 
+    max-width: 1200px;
+}
+
+.picture {
+    width: 50%;
+    height: auto;
+    max-width: 300px;
+    min-width: 150px;
+    border: 3px solid indianred;
+    border-radius: 50%;
+    margin: 2rem;
+
+}
+
+.about{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    border-radius: 10%
+}
+
+.contact{
+    margin: .5rem;
+    border-radius: 10px;
+    align-content: center;
+}
+
+.work{
+    border-radius: 10px;
+    text-wrap: wrap;
+    margin: .5rem;
+    align-content: center;
+}
+
+@media screen and (min-width: 500px) and (max-width: 767px){
+    .about{
+        flex-direction: row;
+    }
+
+    .contact, .work {
+        width: 40%;
+    }
+}
+
+@media screen and (min-width: 768px){
+    .about{
+        flex-direction: column;
+    }
+
+    .contact, .work {
+        width: 90%;
+    }
+
+    .picture {
+        width: 40%;
+    }
+}
